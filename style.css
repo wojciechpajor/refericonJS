@@ -1,0 +1,160 @@
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+.active {
+    background-color: rgba(237, 244, 255, 1);
+    color: rgba(0, 100, 239, 1);
+}
+.active path{
+    fill: rgba(0, 100, 239, 1);
+}
+
+body {
+    margin: 0;
+    background-color: lightgray;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    min-height: 100vh;
+    color: dimgray;
+    background-color: white;
+}
+.containerHidden {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100vh;
+    min-height: 720px;
+    color: dimgray;
+    background-color: white;
+}
+.ulStyle {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: stretch;
+    width: 80%;
+    padding: 0px;
+}
+
+.svgStyle {
+    padding: 0.5rem;
+    flex-shrink: 0;
+}
+
+.svgStyle path {
+    fill: rgba(83, 88, 97, 1);
+}
+
+.buttonStyle {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: solid 1px rgba(235, 234, 240, 1);
+}
+
+.contentDiv:hover {
+    border-radius: 5px;
+    background-color: rgba(237, 244, 255, 1);
+
+}
+
+.contentDiv:hover path {
+    fill: rgba(0, 100, 239, 1);
+}
+.contentDiv:hover span {
+    color: rgba(0, 100, 239, 1);
+}
+
+.dropIcon {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.labelSpan {
+    flex-shrink: 0;
+    padding: 0.5rem;
+}
+
+.listStyle {
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+}
+.listStyleHidden {
+    margin-left: 20px;
+    display: flex;
+    margin-right: auto;
+    cursor: pointer;
+}
+.listStyleActive {
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+    color: rgba(0, 100, 239, 1);
+    background-color: rgba(237, 244, 255, 1);
+}
+.hidePanelStyle {
+    display: flex;
+    height: border-box;
+}
+
+.listStyleActive path{
+    fill: rgba(0, 100, 239, 1);
+}
+
+.listStyle:hover {
+    border-radius: 5px;
+    background-color: rgba(237, 244, 255, 1);
+}
+
+.listStyle:hover path {
+    fill: rgba(0, 100, 239, 1);
+}
+
+.listStyle:hover span {
+    color: rgba(0, 100, 239, 1);
+}
+.listStyleHidden:hover {
+    border-radius: 5px;
+    background-color: rgba(237, 244, 255, 1);
+}
+
+.listStyleHidden:hover path {
+    fill: rgba(0, 100, 239, 1);
+}
+
+.listStyleHidden:hover span {
+    color: rgba(0, 100, 239, 1);
+}
+.badgeHidden {
+    font-size: 14px;
+    margin: auto;
+    padding: 2px;
+    border: solid 2px rgba(199, 204, 213, 1) ;
+}
+.badgeCircle {
+    display: inline-table;
+    vertical-align: middle;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: rgba(0, 100, 239, 1);
+    border-radius: 50%;
+}
+
+.badgeContent {
+    display: table-cell;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.75rem;
+}
