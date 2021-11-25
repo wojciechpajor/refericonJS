@@ -1,4 +1,4 @@
-var html = '';
+let html = '';
 const menuItems = [
     {
         id: 1,
@@ -158,19 +158,12 @@ const menuItems = [
         children: [],
     },
 ];
-var isMenuHide = false;
+let isMenuHide = false;
 
 function toggleIsMenuHide() {
     isMenuHide = !isMenuHide;
-    if (isMenuHide) {
-        document.getElementById("container").className = "containerHidden"
-        document.getElementById("menuFooter").innerHTML = addHideToggle();
-    } else if (!isMenuHide) {
-        document.getElementById("container").className = "container"
-        document.getElementById("menuFooter").innerHTML = addHideToggle();
-
-
-    }
+    document.getElementById("container").className = isMenuHide ? "containerHidden" : "container";
+    document.getElementById("menuFooter").innerHTML = addHideToggle();
     renderItems();
 }
 
@@ -251,7 +244,7 @@ function addHideToggle() {
 }
 
 function renderItems() {
-    var menuItemsElement = document.getElementById("menuItems");
+    let menuItemsElement = document.getElementById("menuItems");
     menuItemsElement.innerText = '';
     html = '';
     html += addLogo();
@@ -304,15 +297,16 @@ if (!isMenuHide) {
 }
 
 function getMenuItem(item) {
+    let _html
     if (!isMenuHide) {
-        var _html = `<li class="listStyleActive" onclick={toggleMenuItem(${item.id})}>`;
+        _html = `<li class="listStyleActive" onclick={toggleMenuItem(${item.id})}>`;
         if (item.active) {
-            var _html = `<li class="listStyleActive" onclick={toggleMenuItem(${item.id})}>`;
+            _html = `<li class="listStyleActive" onclick={toggleMenuItem(${item.id})}>`;
         } else {
-            var _html = `<li class="listStyle" onclick={toggleMenuItem(${item.id})}>`;
+            _html = `<li class="listStyle" onclick={toggleMenuItem(${item.id})}>`;
         }
     } else if (isMenuHide) {
-        var _html = `<li class="listStyleHidden" onclick={toggleMenuItem(${item.id})}>`;
+        _html = `<li class="listStyleHidden" onclick={toggleMenuItem(${item.id})}>`;
     }
 
     if (item.icon != null) {

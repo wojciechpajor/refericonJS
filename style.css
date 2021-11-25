@@ -15,8 +15,15 @@ body {
     background-color: lightgray;
 }
 
+#menuFooter {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .container {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     max-width: 250px;
     min-height: 100vh;
@@ -25,6 +32,7 @@ body {
 }
 .containerHidden {
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     width: 100px;
     height: 100vh;
